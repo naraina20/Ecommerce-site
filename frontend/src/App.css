@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  padding: 1px;
+}
+::-webkit-scrollbar-track:hover {
+  border-left: 1px solid rgba(32, 32, 32, 0.664);
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: tomato;
+  border-radius: 20px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(179, 58, 36);
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: green ;
+}
+.redColor {
+  color: red ;
+}

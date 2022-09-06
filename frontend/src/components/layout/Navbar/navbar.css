@@ -1,0 +1,139 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navContainer {
+  width: 100vw;
+  height: inherit;
+  padding: 1.5vmax 1vmax;
+  background-color: white;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.scrollyNav{
+  box-shadow: 0px 4px 22px #0b0b20a3;
+}
+
+.navContainer > div {
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.logo {
+  justify-content: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 25px;
+  transition: all 0.5s;
+}
+
+.logo img:hover {
+  transform: scale(1.2, 1.2);
+  filter: drop-shadow(0 0 10px tomato);
+}
+
+.navBlock2 {
+  width: 45%;
+
+}
+.navBlock1,
+.navBlock3 {
+  width: 20%;
+}
+
+nav {
+  height: 100%;
+    width: 100%;
+    padding: 0 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLink {
+  color: rgba(0, 0, 0, 0.6);
+  font: 500 18px "Roboto";
+  transition: all 0.5s;
+}
+
+
+.active {
+  color: tomato !important;
+  transform: scale(1.1, 1.1) !important;
+}
+
+.menuIcon{
+    display: none !important;
+}
+
+.navLink:hover {
+  color: tomato;
+  transform: scale(1.1, 1.1);
+}
+
+@media screen and (max-width: 900px) {
+  .navBlock2 {
+    position: fixed;
+    top: 56px;
+    height: 100vh !important;
+    width: 60vw;
+    background-color: rgb(34, 33, 33);
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  nav {
+    height: 80%;
+    flex-direction: column;
+    padding: 8vmax 0;
+  }
+
+  .navLink {
+    font-size: 1.6rem;
+    color: white;
+  }
+
+  .logo img {
+    width: 100%;
+    position: relative;
+  }
+
+  .menuIcon {
+    display: block !important;
+    position: absolute;
+    left: 20px;
+    top: 7px;
+    font-weight: 600;
+    font-size: 35px !important;
+  }
+
+  .menuIcon:hover {
+    color: tomato;
+  }
+
+  .navBlock1 {
+    width: 100%;
+  }
+  .navBlock3 {
+    width: 0;
+  }
+
+  .logo img:hover {
+    transform: scale(1, 1);
+  }
+}
