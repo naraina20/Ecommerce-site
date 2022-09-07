@@ -28,27 +28,27 @@ const Navbar = () => {
       </div>
       <div className="navBlock2" style={{ left: show ? "0" : "-100%" }}>
         <nav>
-          <NavLink exact to="/" className="navLink" activeClassName="active">
+          <NavLink exact to="/" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>Home</li>{" "}
           </NavLink>
-          <NavLink to="/products" className="navLink" activeClassName="active">
+          <NavLink to="/products" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>Products</li>{" "}
           </NavLink>
-          <NavLink to="/about" className="navLink" activeClassName="active">
+          <NavLink to="/about" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>About</li>{" "}
           </NavLink>
-          <NavLink to="/contact" className="navLink" activeClassName="active">
+          <NavLink to="/contact" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>Contanct</li>{" "}
           </NavLink>
-          <NavLink to="/account" className="navLink" activeClassName="active">
+          <NavLink to="/account" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>Profile</li>{" "}
           </NavLink>
-          <NavLink to="/search" className="navLink" activeClassName="active">
+          <NavLink to="/search" onClick={() => setShow(!show)} className="navLink" activeClassName="active">
             {" "}
             <li>Search</li>{" "}
           </NavLink>
