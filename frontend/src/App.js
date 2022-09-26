@@ -42,6 +42,7 @@ import Category from "./components/Admin/Category";
 import Contact from "./components/layout/Contact/Contact";
 import About from "./components/layout/About/About";
 import NotFound from "./components/layout/Not Found/NotFound";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -65,6 +66,7 @@ function App() {
   }, []);
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
 
       {isAuthenticated && <UserOptions user={user} />}
