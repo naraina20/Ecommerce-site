@@ -103,7 +103,8 @@ const LoginSignup = ({ history, location }) => {
       ) : (
         <Fragment>
           <div className="LoginSignUpContainer">
-            <div className="LoginSignUpBox">
+              <div className="LoginSignUpBox">
+                
               <div>
                 <div className="login_signUp_toggle">
                   <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>

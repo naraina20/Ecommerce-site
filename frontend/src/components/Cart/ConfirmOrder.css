@@ -132,6 +132,7 @@
   
     .confirmOrderPage > div:last-child {
       border-left: 0;
+      
       border-top: 1px solid rgba(0, 0, 0, 0.247);
     }
   

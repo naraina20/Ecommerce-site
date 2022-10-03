@@ -13,6 +13,7 @@ import { CLEAR_ERRORS } from "../../constants/catConstant";
 
 
 const Products = ({ match }) => {
+  
   const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(1);

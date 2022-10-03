@@ -7,6 +7,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 const OrderSuccess = () => {
   return (
     <div className="orderSuccess">
+      
       <CheckCircleIcon />
 
       <Typography>Your Order has been Placed successfully </Typography>

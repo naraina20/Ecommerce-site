@@ -10,6 +10,7 @@ import Metadata from "../layout/Metadata";
 
 const UpdateProfile = ({ history }) => {
   const dispatch = useDispatch();
+  
 
   const { user } = useSelector((state) => state.user);
   const { isUpdated, error, loading } = useSelector((state) => state.profile);

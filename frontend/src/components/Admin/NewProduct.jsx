@@ -11,6 +11,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import DescriptionIcon from "@mui/icons-material/Description";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import StorageIcon from "@mui/icons-material/Storage";
+
 import { CLEAR_ERRORS } from "../../constants/catConstant";
 import { getAllCategories } from "../../actions/catAction";
 

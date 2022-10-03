@@ -9,6 +9,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import KeyIcon from '@mui/icons-material/Key';
 
+
 const UpdatePassword = ({history}) => {
   const dispatch = useDispatch();
 

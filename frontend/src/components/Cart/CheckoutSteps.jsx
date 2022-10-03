@@ -9,6 +9,7 @@ const CheckoutSteps = ({ activeStep }) => {
   const steps = [
     {
       label: <Typography>Shipping Details</Typography>,
+
       icon: <LocalShippingIcon />,
     },
 

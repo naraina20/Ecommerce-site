@@ -10,6 +10,7 @@ const ProductCard = ({ product }) => {
         edit: false,
         color: "rgba(20,20,20,0,1)",
         activeColor: "tomato",
+        
         size: window.innerWidth < 600 ? 15 : 20,
         value: product.ratings,
         isHalf: true,

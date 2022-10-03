@@ -9,6 +9,7 @@
   
   .MuiStepConnector-active,
   .MuiStepConnector-completed {
+    
     background-color: tomato;
   }
   

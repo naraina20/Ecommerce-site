@@ -12,6 +12,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import StorageIcon from "@mui/icons-material/Storage";
 
+
 const UpdateProduct = ({ history, match }) => {
   const dispatch = useDispatch();
 

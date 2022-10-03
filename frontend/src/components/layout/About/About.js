@@ -10,6 +10,7 @@ const About = () => {
     window.location = "https://www.linkedin.com/in/naraina-dewasi-272b19201/";
   };
   return (
+    
     <div className="aboutSection">
       <div></div>
       <div className="aboutSectionGradient"></div>

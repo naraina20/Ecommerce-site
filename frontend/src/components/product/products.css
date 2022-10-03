@@ -11,6 +11,7 @@
   .products {
     display: flex;
     flex-wrap: wrap;
+    
     margin: 2vmax auto;
     width: 80vw;
     padding: 0 5vmax;

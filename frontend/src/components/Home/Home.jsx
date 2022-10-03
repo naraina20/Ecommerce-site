@@ -31,6 +31,7 @@ const Home = () => {
             <p>welcome to Ecommerce</p>
             <h1>FIND AMAZING RPODUCTS BELOW</h1>
 
+              
             <a href="#container">
               <button>Scroll</button>
             </a>

@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
   }
+  
   .orderSuccess > svg {
     font-size: 7vmax;
     color: tomato;

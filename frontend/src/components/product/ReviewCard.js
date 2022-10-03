@@ -11,7 +11,8 @@ const ReviewCard = ({review}) => {
         size: window.innerWidth < 600 ? 15 : 20,
         value: review.rating,
         isHalf: true,
-    };
+  };
+  
     
   return (
     <div className='reviewCard'>

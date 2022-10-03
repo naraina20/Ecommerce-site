@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./ConfirmOrder.css"
 
+
 const ConfirmOrder = ({history}) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);

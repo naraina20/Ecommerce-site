@@ -10,6 +10,7 @@ const Contact = () => {
       </a>
     </div>
   );
+  
 };
 
 export default Contact;

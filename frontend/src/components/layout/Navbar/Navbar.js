@@ -24,6 +24,7 @@ const Navbar = () => {
         <MenuIcon className="menuIcon" onClick={() => setShow(!show)} />
         <Link to={"/"}>
           <img src={logo} alt="logo" />
+          
         </Link>{" "}
       </div>
       <div className="navBlock2" style={{ left: show ? "0" : "-100%" }}>

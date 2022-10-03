@@ -11,4 +11,5 @@ const Metadata = ({title}) => {
   )
 }
 
+
 export default Metadata

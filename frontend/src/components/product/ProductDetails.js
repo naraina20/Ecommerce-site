@@ -11,6 +11,7 @@ import Metadata from "../layout/Metadata";
 import { addItemToCart } from "../../actions/cartAction";
 import {
   Dialog,
+  
   DialogActions,
   DialogContent,
   DialogTitle,

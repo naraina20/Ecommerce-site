@@ -7,7 +7,8 @@ const Footer = () => {
   return (
     <footer id="footer">
           <div className="leftFooter">
-              <h4>DOWNLOAD OUR APP</h4>
+        <h4>DOWNLOAD OUR APP</h4>
+        
               <p>Download App for Android and IOS mobile phone</p>
               <img src={playStore} alt="playstore" />
               <img src={appStore} alt="appStore" />

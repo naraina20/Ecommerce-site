@@ -12,6 +12,7 @@ import { Button } from "@mui/material";
 import { clearErrors, deleteUser, getAllUsers } from "../../actions/userAction";
 import { DELETE_USER_RESET } from "../../constants/userConstants";
 
+
 const UsersList = ({ history }) => {
   const dispatch = useDispatch();
   const { error, users } = useSelector((state) => state.allUsers);

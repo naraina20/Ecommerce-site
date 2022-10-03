@@ -8,6 +8,7 @@ import { SpeedDial, SpeedDialAction } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import { logOut } from "../../../actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
+
 import Backdrop from "@mui/material/Backdrop";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 

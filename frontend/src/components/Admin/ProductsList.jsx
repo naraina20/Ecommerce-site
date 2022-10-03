@@ -2,6 +2,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import "./productList.css";
 import React, { Fragment, useEffect } from "react";
 import Metadata from "../layout/Metadata";
+
 import Sidebar from "./Sidebar";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";

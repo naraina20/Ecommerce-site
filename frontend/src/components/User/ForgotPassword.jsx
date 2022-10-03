@@ -38,7 +38,8 @@ const ForgotPassword = () => {
       {loading ? (
         <Loader />
       ) : (
-        <Fragment>
+          <Fragment>
+            
           <Metadata title={"Forgot Password"} />
           <div className="forgotPasswordContainer">
             <div className="forgotPasswordBox">
