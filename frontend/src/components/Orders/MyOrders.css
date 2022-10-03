@@ -2,11 +2,9 @@
   width: 100vw;
   max-width: 100%;
   padding: 0 7vmax;
-  margin-top: 5vmax;
   box-sizing: border-box;
   background-color: rgb(235, 235, 235);
   position: fixed;
-  top: 0;
   left: 0;
   height: 94vh;
   display: flex;
