@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c67f62c.css",
+    "main.js": "/static/js/main.7062b452.js",
+    "static/media/camera.png": "/static/media/camera.129461f531f4b02a5f50.png",
+    "static/media/Profile.png": "/static/media/Profile.697fdcd21f6d157b9073.png",
+    "static/media/playstore.png": "/static/media/playstore.82b4831979e0ce7c733e.png",
+    "static/media/Appstore.png": "/static/media/Appstore.d0c5839937e3c36285f6.png",
+    "static/media/logo.png": "/static/media/logo.926b85bdc2fede377204.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.6c67f62c.css.map": "/static/css/main.6c67f62c.css.map",
+    "main.7062b452.js.map": "/static/js/main.7062b452.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c67f62c.css",
+    "static/js/main.7062b452.js"
+  ]
+}
