@@ -6,10 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js ",
-    "dev": "nodemon backend/server.js",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "dev": "nodemon backend/server.js"
   },
-  "author": "",
+  "author": "Naraina Dewasi",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,5 +26,5 @@
     "stripe": "^10.0.0",
     "validator": "^13.7.0"
   },
-  "keywords": []
+  "keywords": ["projects", "ecommerce", "naraina", "camera", "cloudinary", "shoes", "portfolio", "portfolio projects"]
 }
