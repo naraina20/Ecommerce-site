@@ -69,7 +69,7 @@ function App() {
       <ScrollToTop />
       <Navbar />
 
-      {isAuthenticated && <UserOptions user={user} />}
+      <UserOptions user={user} />
 
       {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
@@ -167,11 +167,11 @@ function App() {
           component={ProductReviews}
         />
 
-        <Route
+        {/* <Route
           component={
             window.location.pathname === "/process/payment" ? null : NotFound
           }
-        />
+        /> */}
       </Switch>
 
       <Footer />

@@ -162,6 +162,7 @@ const ProductDetails = ({ match }) => {
                       alt={`${i} Slide`}
                       height="400px"
                       width="300px"
+                      loading="lazy"
                     />
                   ))}
               </Carousel>

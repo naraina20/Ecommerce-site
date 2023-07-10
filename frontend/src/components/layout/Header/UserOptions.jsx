@@ -8,12 +8,14 @@ import { SpeedDial, SpeedDialAction } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import { logOut } from "../../../actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
+import LoginIcon from '@mui/icons-material/Login';
 
 import Backdrop from "@mui/material/Backdrop";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const UserOptions = ({ user }) => {
   const { cartItems } = useSelector((state) => state.cart);
+  const {isAuthenticated} = useSelector((state)=> state.user)
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -31,10 +33,11 @@ const UserOptions = ({ user }) => {
       name: `cart(${cartItems.length})`,
       func: cart,
     },
-    { icon: <LogoutIcon />, name: "Logout", func: logOutUser },
+    // {isAuthenticated ? (icon: <LogoutIcon />, name: "Logout", func: logOutUser) : (icon: <LoginIcon/>, name: "Logout", func: logInUser) }
+    { icon: isAuthenticated ? <LogoutIcon /> : <LoginIcon/>, name: isAuthenticated ? "Logout" : "Login", func: isAuthenticated ? logOutUser : logInUser},
   ];
 
-  if (user.role === "admin") {
+  if (isAuthenticated && user.role === "admin") {
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
@@ -58,6 +61,9 @@ const UserOptions = ({ user }) => {
     dispatch(logOut());
     alert("logout successfully");
   }
+  function logInUser() {
+    history.push("/login");
+  }
 
   return (
     <Fragment>
@@ -73,7 +79,7 @@ const UserOptions = ({ user }) => {
         icon={
           <img
             className="speedDialIcon"
-            src={user.avatar.url ? user.avatar.url : "/Profile.png"}
+            src={isAuthenticated && user.avatar.url ? user.avatar.url : "/Profile.png"}
             alt="icon"
           />
         }
