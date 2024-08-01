@@ -1,6 +1,7 @@
 const ErrorHandler = require("../utils/catcherror");
 
 module.exports = (err, req, res, next) => {
+  console.log('error in error.js ', err)
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal server error";
 
@@ -30,6 +31,6 @@ module.exports = (err, req, res, next) => {
 
     res.status(err.statusCode).json({
         success: false,
-        message: err.message,
+        message: err,
   })
 };
