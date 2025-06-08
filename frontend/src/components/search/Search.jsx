@@ -16,7 +16,7 @@ const Search = ({ history }) => {
   };
   return (
     <Fragment>
-          <Metadata title={"Search a product -- ECOMMERCE"}/>
+          <Metadata title={"Search a product -- Urban-nest"}/>
           <form className="searchBox" onSubmit={searchSubmitHandler}>
             <input
               type="text"

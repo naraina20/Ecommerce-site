@@ -102,7 +102,7 @@ exports.forgotpassword = catchAsyncError(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Ecommerce password recovery`,
+      subject: `Urban-nest password recovery`,
       message,
     });
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../images/logo.png";
+import logo from "../../../images/urbannest.jpg";
 import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
