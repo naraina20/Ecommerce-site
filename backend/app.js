@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(fileUpload());
 
+// Allow all origins (not secure for production)
+app.use(cors());
+
 //config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config();

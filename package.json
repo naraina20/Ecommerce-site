@@ -15,6 +15,7 @@
     "body-parser": "^1.19.2",
     "cloudinary": "^1.30.1",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-fileupload": "^1.4.0",
@@ -26,5 +27,14 @@
     "stripe": "^10.0.0",
     "validator": "^13.7.0"
   },
-  "keywords": ["projects", "ecommerce", "naraina", "camera", "cloudinary", "shoes", "portfolio", "portfolio projects"]
+  "keywords": [
+    "projects",
+    "ecommerce",
+    "naraina",
+    "camera",
+    "cloudinary",
+    "shoes",
+    "portfolio",
+    "portfolio projects"
+  ]
 }
