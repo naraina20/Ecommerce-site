@@ -19,7 +19,7 @@ app.use(cors());
 
 //config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config();
+  require("dotenv").config({ path: "backend/config/config.env" });
 }
 
 //routes import
