@@ -13,9 +13,6 @@ RUN npm install
 # Copy the rest of the project files into the container
 COPY . .
 
-WORKDIR /app/frontend
-RUN npm install && npm run build
-
 # Expose the port the app runs on
 EXPOSE 4000
 
