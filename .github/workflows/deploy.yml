@@ -1,9 +1,9 @@
-name: Deploy E-Commerce App to EC2
+name: Deploy Pixamart-backend App to EC2
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -13,6 +13,28 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push Docker image
+      run: |
+        IMAGE_TAG=${GITHUB_SHA::7}  # first 7 characters of commit SHA
+        echo "Building image with tag $IMAGE_TAG"
+        
+        # Build and push unique SHA tag
+        docker build -t narainad308/pixamart-backend:$IMAGE_TAG .
+        docker push narainad308/pixamart-backend:$IMAGE_TAG
+
+        # Tag as latest and push
+        docker tag narainad308/pixamart-backend:$IMAGE_TAG narainad308/pixamart-backend:latest
+        docker push narainad308/pixamart-backend:latest
+
     - name: Connect and deploy to EC2
       uses: appleboy/ssh-action@v1.0.3
       with:
@@ -21,9 +43,13 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: 22
         script: |
-          cd /home/ubuntu/Ecommerce-site
-          git pull origin master
-          sudo docker build -t ecommerce-app .
-          sudo docker stop ecommerce-app || true
-          sudo docker rm ecommerce-app || true
-          sudo docker run -d --restart unless-stopped --env-file .env --name ecommerce-app -p 5000:4000 ecommerce-app
+          cd /home/ubuntu/pixamart-backend
+
+          # Pull the latest Docker image using Docker Compose
+          sudo docker-compose pull
+
+          # Start/recreate the container
+          sudo docker-compose up -d --force-recreate
+
+          # Remove unused images to free space
+          sudo docker image prune -af

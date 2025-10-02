@@ -2,6 +2,7 @@ const app = require("./app");
 const connectmongodb = require('./config/database');
 // const  path  = require("./app")
 const cloudinary = require("cloudinary")
+require("dotenv")
 
 //handling uncought Exception
 process.on("uncaughtException", err => {
@@ -9,12 +10,6 @@ process.on("uncaughtException", err => {
   console.log("shutting down server due to uncaught Exception");
   process.exit(1);
 })
-
-//config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config();
-}
-
 
 //connect database
 connectmongodb();
