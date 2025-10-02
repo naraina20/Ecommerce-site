@@ -46,10 +46,10 @@ jobs:
           cd /home/ubuntu/pixamart-backend
 
           # Pull the latest Docker image using Docker Compose
-          sudo docker-compose pull
+          sudo docker compose pull
 
           # Start/recreate the container
-          sudo docker-compose up -d --force-recreate
+          sudo docker compose up -d --force-recreate
 
           # Remove unused images to free space
           sudo docker image prune -af
