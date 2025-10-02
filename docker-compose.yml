@@ -5,7 +5,7 @@ services:
     image: narainad308/pixamart-backend:latest
     container_name: pixamart-backend
     ports:
-      - "4000:4000"
+      - "4001:4000"
     env_file:
       - .env
     restart: always
