@@ -1,7 +1,7 @@
 const ErrorHandler = require("../utils/catcherror");
 
 module.exports = (err, req, res, next) => {
-  console.log('error in error.js ', err)
+  console.log('error in error.js ', err, "message ", err.message)
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal server error";
 
@@ -10,9 +10,9 @@ module.exports = (err, req, res, next) => {
     const message = `Resaurce not found. Invalid: ${err.path}`
     err = new ErrorHandler(message, 400);
   }
-  
+
   // mongodb duplicate key error
-  if (err.code === "E11000" ) {
+  if (err.code === "E11000") {
     const message = `Duplicate ${Object.keys(err.keyValue)} entered`
     err = new ErrorHandler(message, 400);
   }
@@ -29,8 +29,8 @@ module.exports = (err, req, res, next) => {
     err = new ErrorHandler(message, 400);
   }
 
-    res.status(err.statusCode).json({
-        success: false,
-        message: err,
+  res.status(err.statusCode).json({
+    success: false,
+    message: err.message,
   })
 };
