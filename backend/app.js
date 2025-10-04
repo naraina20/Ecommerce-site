@@ -13,12 +13,12 @@ const axios = require("axios")
 const { Provider } = require("react-redux");
 
 const app = express();
-require("dotenv")
+require("dotenv").config()
 
 
 // Allow all origins (not secure for production)
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: ["http://localhost:3000", process.env.FRONTEND_URL],
   credentials: true
 }));
 
@@ -44,6 +44,7 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", category);
+app.use(require('./middleware/error.js'))
 
 const buildPath = path.join(__dirname, "../frontend/build")
 
